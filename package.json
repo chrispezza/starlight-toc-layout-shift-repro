@@ -1,0 +1,19 @@
+{
+  "name": "starlight-toc-layout-shift-repro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "serve:split": "node serve-split.mjs",
+    "measure": "pnpm dlx lighthouse@12.6.1 http://127.0.0.1:4322/guides/long-page/ --preset=desktop --only-audits=cumulative-layout-shift,layout-shifts --chrome-flags=--headless=new --output=json --output-path=./lighthouse.json --quiet && node print-cls.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.6",
+    "astro": "^7.2.10",
+    "sharp": "^0.35.3"
+  }
+}
